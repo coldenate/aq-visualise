@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aq-visualise"
+version = "0.1.0"
+description = "visualising air quality and its effects on human response time"
+authors = ["Nathan Solis <66754842+coldenate@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "aq_visualise"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^1.5.3"
+seaborn = "^0.12.2"
+bokeh = "^3.0.3"
+plotly = "^5.13.1"
+matplotlib = "^3.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.21.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
