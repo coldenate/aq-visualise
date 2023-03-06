@@ -48,5 +48,5 @@ for date, day_data in data.items():
 
 
 # save the updated data to a new file
-with open("dataset.json", "w") as f:
+with open("dataset.json", "w", encoding='utf-8') as f:
     json.dump(data, f, indent=4)
