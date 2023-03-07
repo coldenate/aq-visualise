@@ -66,6 +66,21 @@ tornado = ">=5.1"
 xyzservices = ">=2021.09.1"
 
 [[package]]
+name = "catppuccin"
+version = "1.1.1"
+description = "🐍 Soothing pastel theme for Python."
+category = "main"
+optional = false
+python-versions = ">=3.7.2,<4.0.0"
+files = [
+    {file = "catppuccin-1.1.1-py3-none-any.whl", hash = "sha256:bb33dca4f85899ff4f05597ee5200d444ac5097d03f235cb757c75261ea6ddcf"},
+    {file = "catppuccin-1.1.1.tar.gz", hash = "sha256:98736e577c88b852f6722c433abfbfffefdbf620f67cdf3671f2f36647a0c4a7"},
+]
+
+[package.extras]
+pygments = ["pygments (>=2.13.0,<3.0.0)"]
+
+[[package]]
 name = "cffi"
 version = "1.15.1"
 description = "Foreign Function Interface for Python calling C code."
@@ -1419,4 +1434,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "8b7f6271e629605e997f7708b2a76b428f14a7a3d4fc6fce7640583492a5b30b"
+content-hash = "9eb091fcefaf590a60963d3105e54bb376713538b4e5dbcec9b40d504fec0e04"
