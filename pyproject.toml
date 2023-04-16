@@ -16,6 +16,8 @@ plotly = "^5.13.1"
 matplotlib = "^3.7.1"
 numpy = "^1.24.2"
 catppuccin = "^1.1.1"
+rich = "^13.3.2"
+coloraide = "^1.8.2"
 
 
 [tool.poetry.group.dev.dependencies]

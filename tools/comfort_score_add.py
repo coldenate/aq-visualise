@@ -1,7 +1,8 @@
+"""File to add comfort score to the dataset.json file"""
 import json
 
 # load the dataset.json file
-with open("dataset.json", "r") as f:
+with open("dataset.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # iterate through each day in the data
@@ -40,13 +41,21 @@ for date, day_data in data.items():
         aiming_reaction_norm = max(0, 1 - (aiming_reaction_ms / 1000))
         chimp_score_norm = min(1, chimp_score / 10)
 
-        # calculate the performance score as the average of the normalized values, scaled up to a maximum of 100
-        performance_score = (reaction_time_norm + visual_mem_norm + aiming_reaction_norm + chimp_score_norm) / 4 * 100
+        performance_score = (
+            (
+                reaction_time_norm
+                + visual_mem_norm
+                + aiming_reaction_norm
+                + chimp_score_norm
+            )
+            / 4
+            * 100
+        )
 
         # add the performance score to the survey entry
         survey["performance_score"] = performance_score
 
 
 # save the updated data to a new file
-with open("dataset.json", "w", encoding='utf-8') as f:
+with open("dataset.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4)
